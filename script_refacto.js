@@ -18,7 +18,7 @@ const datasetStructure = {
     ], 
 }
 
-// Function thart create the graph
+// Function that create the graph
 const graph = () =>{
     const newData = dataWithAvgTotal() // get new data with average total
     const labels = graphLabels() // get graph labels
@@ -28,6 +28,18 @@ const graph = () =>{
 
     const dataset = graphDataset(keys, newData) // get the dataset
     console.log(dataset)
+}
+
+// Function that create the graph chart
+const graphChart = (labels, graphValues) => {
+  const ctx = document.getElementById('newChart').getContext('2d');
+  var newChart = new Chart(ctx, {
+    type: 'line',
+    data: {
+      labels: labels,
+      datasets: graphValues
+    }
+  });
 }
 
 // Function that create the graph Dataset
@@ -51,7 +63,6 @@ const graphDataset = (keys, data) => {
     })
     return dataset
 }
-
 
 // Function that geenrate the average total of each record
 const dataWithAvgTotal = () => {
