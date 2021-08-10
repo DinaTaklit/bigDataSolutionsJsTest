@@ -27,7 +27,7 @@ const graph = () =>{
     keys = keys.filter(key => key !== 'period') //  exclude the period key
 
     const dataset = graphDataset(keys, newData) // get the dataset
-    console.log(dataset)
+    graphChart(labels, dataset) // create the graph
 }
 
 // Function that create the graph chart
