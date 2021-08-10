@@ -22,13 +22,24 @@
     <!-- Latest compiled and minified JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.5.0/chart.min.js" integrity="sha512-asxKqQghC1oBShyhiBwA+YgotaSYKxGP1rcSYTDrB0U6DxwlJjU59B67U8+5/++uFjcuVM8Hh5cokLjZlhm3Vg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <br><br>
-    <div class="container">
-        <canvas id="myChart" width="600" height="400"></canvas>
-    </div>
+    <section class="graphs">
+        <div class="container">
+            <h2>Old Graph</h2>
+            <canvas id="myChart" width="600" height="400"></canvas>
+        </div>
+    
+        <div class="container">
+            <h2>Refactored Graph</h2>
+            <canvas id="newChart" width="600" height="400"></canvas>
+        </div>
+    </section>
+    
     <!-- <script src="script.js"></script> -->
     <script src="script_refacto.js" type="module"></script>
+    <script src="script.js"></script>
 </body>
 </html>

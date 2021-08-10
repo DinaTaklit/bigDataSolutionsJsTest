@@ -22,6 +22,7 @@ var data = [
 function generateGraph() {
   var dataWithTotal = [];
   
+  
   for (var i = 0; i < data.length; i++) {
     var temp = data[i];
     total = 0;
@@ -34,6 +35,7 @@ function generateGraph() {
     dataWithTotal.push(temp);
   }
   
+  
   var labels = [];
   
   for (var i = 0; i < dataWithTotal.length; i++) {
@@ -42,6 +44,7 @@ function generateGraph() {
   
   var graphValues = [];
   var keys = Object.keys(dataWithTotal[0]);
+  
   
   for (var i = 0; i < keys.length; i++) {
     if(keys[i] !== "period") {
@@ -69,7 +72,7 @@ function generateGraph() {
       graphValues.push(temp);
     }
   }
-  
+  console.log(graphValues)
   var ctx = document.getElementById('myChart').getContext('2d');
   var myChart = new Chart(ctx, {
     type: 'line',

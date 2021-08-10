@@ -1,0 +1,19 @@
+*, 
+*::after,
+*:before{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.graphs{
+    display: flex;
+    align-items: center;
+    padding: 4rem 1rem;
+}
+
+.graphs .container h2{
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+}
