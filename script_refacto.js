@@ -1,5 +1,14 @@
 import data from './data.js'
 
+
+// Function thart create the graph
+const graph = () =>{
+    const newData = dataWithAvgTotal() // get new data with average total
+    const labels = graphLabels() // get graph labels
+    console.log(newData)
+    console.log(labels)
+}
+
 // Function that geenrate the average total of each record
 const dataWithAvgTotal = () => {
     // array of the average values of each data record
@@ -19,3 +28,14 @@ const dataWithAvgTotal = () => {
      })
     return newdata
 }
+
+// Function that generate the graph labels
+const graphLabels = () => {
+    // map through the array of data to get the period label
+    const labels = data.map(item => {
+        return item.period // return the period value
+    })
+    return labels
+}
+
+graph()
